@@ -43,3 +43,53 @@ nav ul li {
 h1 {
     text-align: center;
 }
+
+.contador {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.boton-rojo {
+    background-color: red;
+    border-radius: 8px;
+    border-width: 0;
+    color: #333333;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    list-style: none;
+    margin: 0;
+    padding: 5px 7px;
+    text-align: center;
+    transition: all 200ms;
+}
+
+.boton-verde {
+    background-color: green;
+    border-radius: 8px;
+    border-width: 0;
+    color: #333333;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    list-style: none;
+    margin: 0;
+    padding: 5px 7px;
+    text-align: center;
+    transition: all 200ms;
+}
+
+.cantidad {
+    margin: 0 10px;
+}
+
+.boton-cart {
+    border: 2px solid grey;
+    border-radius: 8px;
+    display: inline-block;
+    padding: 5px 7px;
+}
