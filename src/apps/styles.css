@@ -1,95 +1,44 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+body {
     background-color: black;
+}
+
+.bx {
     color: cyan;
 }
 
-.logo {
-    width: 20vw;
-}
-
-.carritoImg {
-    width: 4vw;
-    cursor: pointer;
-    margin: 5px;
-}
-
-nav {
-    width: 90%;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    float: left;
-}
-
-nav ul {
-    list-style-type: none;
-}
-
-nav ul li {
-    display: inline;
-    padding: 0 10px;
-    border: 2px solid cyan;
-    border-radius: 10px;
-    cursor: pointer;
-    text-align: center;
-    text-transform: uppercase;
+#navbarNav ul li a {
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: cyan;
 }
 
 h1 {
+    color: cyan;
     text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.navbar-toggler,
+.navbar-toggler-icon,
+.navbar-collapse {
+    color: cyan;
 }
 
 .contador {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 15px;
 }
 
-.boton-rojo {
-    background-color: red;
-    border-radius: 8px;
-    border-width: 0;
-    color: #333333;
-    cursor: pointer;
-    display: inline-block;
-    font-size: 14px;
-    font-weight: 500;
-    list-style: none;
-    margin: 0;
-    padding: 5px 7px;
-    text-align: center;
-    transition: all 200ms;
+.btn {
+    margin: 0 5px;
 }
 
-.boton-verde {
-    background-color: green;
-    border-radius: 8px;
-    border-width: 0;
-    color: #333333;
-    cursor: pointer;
-    display: inline-block;
-    font-size: 14px;
-    font-weight: 500;
-    list-style: none;
-    margin: 0;
-    padding: 5px 7px;
-    text-align: center;
-    transition: all 200ms;
+.card {
+    color: #fff;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.cantidad {
-    margin: 0 10px;
-}
-
-.boton-cart {
-    border: 2px solid grey;
-    border-radius: 8px;
-    display: inline-block;
-    padding: 5px 7px;
+.row {
+    width: 600px;
 }

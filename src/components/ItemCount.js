@@ -1,8 +1,7 @@
-import React from 'react'
-import { useState } from 'react'
+import React, { useState } from 'react'
 
-const ItemCount = ({ stock, initial, onAdd }) => {
-    const [cantidad, setCantidad] = useState(initial);
+const ItemCount = ({ onAdd, stock, initial }) => {
+    const [cantidad, setCantidad] = useState(initial)
 
     const sumaCantidad = () => {
         if (cantidad < stock) {
@@ -17,13 +16,11 @@ const ItemCount = ({ stock, initial, onAdd }) => {
 
     return (
         <>
-            <div className='contador'>
-                <button className='boton-rojo' onClick={restaCantidad}>-</button>
-                <div className='cantidad'>{cantidad}</div>
-                <button className='boton-verde' onClick={sumaCantidad}>+</button>
-            </div>
-            <div className="boton-cart" onClick={() => onAdd(cantidad)}>
-                <p className='cart-text'>Añadir al carrito</p>
+            <div className="container contador">
+                <button type="button" className="btn btn-danger" onClick={(restaCantidad)}>-</button>
+                <div style={{ color: "cyan" }}>{cantidad}</div>
+                <button type="button" className="btn btn-success" onClick={(sumaCantidad)}>+</button>
+                <button type="button" className="btn btn-info" onClick={onAdd}>Agregar al carrito</button>
             </div>
         </>
     )

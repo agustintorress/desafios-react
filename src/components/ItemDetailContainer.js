@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import ItemList from './ItemList';
-import ItemCount from '../components/ItemCount'
+import ItemDetail from './ItemDetail'
 import { useParams } from 'react-router-dom';
 
 const productos = [
@@ -38,11 +37,10 @@ const productos = [
     },
 ];
 
+const ItemDetailContainer = () => {
+    const [data, setData] = useState({});
 
-const ItemListContainer = ({ greeting }) => {
-    const [data, setData] = useState([]);
-
-    const { categoriaId } = useParams();
+    const { itemId } = useParams();
 
     useEffect(() => {
         const getData = new Promise(resolve => {
@@ -50,25 +48,13 @@ const ItemListContainer = ({ greeting }) => {
                 resolve(productos);
             }, 1000);
         });
-        if (categoriaId) {
-            getData.then(res => setData(res.filter(productos => productos.category === categoriaId)));
-        } else {
-            getData.then(res => setData(res));
-        }
-    }, [categoriaId])
+        getData.then(res => setData(res.find(productos => productos.id === parseInt(itemId))));
+    }, [])
 
-    const onAdd = (cantidad) => {
-        console.log(`Se agrego ${cantidad} al carrito`)
-    }
 
     return (
-        <>
-            <h1>¡{greeting}!</h1>
-            <ItemCount stock={5} initial={1} onAdd={onAdd} />
-            <ItemList data={data} />
-        </>
-
+        <ItemDetail data={data} />
     )
 }
 
-export default ItemListContainer
+export default ItemDetailContainer
