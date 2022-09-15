@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import ItemList from './ItemList';
-import ItemCount from '../components/ItemCount'
+
 import { useParams } from 'react-router-dom';
 
 const productos = [
@@ -57,14 +57,11 @@ const ItemListContainer = ({ greeting }) => {
         }
     }, [categoriaId])
 
-    const onAdd = (cantidad) => {
-        console.log(`Se agrego ${cantidad} al carrito`)
-    }
+
 
     return (
         <>
             <h1>¡{greeting}!</h1>
-            <ItemCount stock={5} initial={1} onAdd={onAdd} />
             <ItemList data={data} />
         </>
 
