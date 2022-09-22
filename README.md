@@ -1,3 +1,10 @@
+Project E-Commerce: OmochaARG
+
+Este proyecto se basa en una serie de desafios para la plataforma CoderHouse, con el objetivo de crear un E-Commerce.
+Basicamente va a usar navegacion por navbar, busqueda por input, detalles de producto, carrito, etc...
+
+>--------------------------------------------------------------------------<
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
