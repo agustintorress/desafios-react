@@ -31,7 +31,7 @@ const productos = [
         id: 4,
         name: "Pablo Facherito",
         description: "El profe bien facherito facheron",
-        price: "No tiene precio",
+        price: 3,
         pictureUrl: "https://pablomonteserin.com/wp-content/uploads/2021/12/suscripcion.png",
         category: "profesor"
     },

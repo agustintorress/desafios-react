@@ -1,6 +1,7 @@
 import React from 'react'
 import "../apps/styles.css"
 import { NavLink } from "react-router-dom"
+import CartWidget from './CartWidget'
 
 const NavBar = ({ brand }) => {
     return (
@@ -23,7 +24,7 @@ const NavBar = ({ brand }) => {
                         </li>
                     </ul>
                     <ul className='navbar-nav lg-icons'>
-                        <li><NavLink className='nav-link' to="/cart"><i className='bx bxs-cart'></i></NavLink></li>
+                        <li><NavLink className='nav-link' to="/cart"><CartWidget /></NavLink></li>
                     </ul>
                 </div>
             </div>
